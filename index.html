@@ -3,9 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FitZone</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        
+
+        nav{
+            background:#111;
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            justify-content:center;
+        }
+
+        nav ul li{
+            position:relative;
+            margin:0 20px;
+        }
+
+    nav ul li a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    nav ul li a:hover{
+        color:#00cc66;
+    }
+
+/* Dropdown Menu */
+
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        top:35px;
+        left:0;
+        background:white;
+        min-width:250px;
+        padding:15px;
+        border-radius:8px;
+        box-shadow:0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content h4{
+        margin-top:10px;
+        margin-bottom:8px;
+        color:#00aa55;
+    }
+
+    .dropdown-content label{
+        display:block;
+        margin:5px 0;
+    }
+
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+    </style>
 </head>
 <body>
-    <H1>FIT ZONE</H1>
+    <nav>
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Schedule ▼</a>
+
+            <div class="dropdown-content">
+
+                <h4>Workout Type</h4>
+
+                <label><input type="checkbox"> Home Workout</label>
+                <label><input type="checkbox"> Gym Workout</label>
+
+                <h4>Gender</h4>
+
+                <label><input type="checkbox"> Male</label>
+                <label><input type="checkbox"> Female</label>
+
+                <h4>Focus Area</h4>
+
+                <label><input type="checkbox"> Full Body</label>
+                <label><input type="checkbox"> Upper Body</label>
+                <label><input type="checkbox"> Lower Body</label>
+
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Diet Plan ▼</a>
+
+            <div class="dropdown-content">
+
+                <h4>Goal</h4>
+
+                <label><input type="checkbox"> Weight Loss</label>
+                <label><input type="checkbox"> Weight Gain</label>
+
+            </div>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+</nav>
+
+
 </body>
 </html>
